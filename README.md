@@ -83,7 +83,3 @@ Do you want to convert another amount (Y/N)?
 
 This project was created as part of my C++ internship task at INDOLIKE.
 It helped me practice real-world problem-solving and modular programming in C++.
-
-KRW – South Korean Won
-
-SAR – Saudi Riyal
