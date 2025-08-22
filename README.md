@@ -60,6 +60,7 @@ GBP – British Pound
 INR – Indian Rupee
 
 AED – UAE Dirham
+
 **Example OUTPUT:**
 Enter the currency of your amount:
 1. USD   2. PKR
