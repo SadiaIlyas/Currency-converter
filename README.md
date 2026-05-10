@@ -1,85 +1,114 @@
-**💱 Currency Converter in C++**
+# Currency Converter 💱
 
-A simple console-based Currency Converter built in C++.
-This program allows users to convert an entered amount between multiple currencies such as USD, PKR, EUR, GBP, INR, AED, KRW, and SAR.
+> A multi-currency conversion tool built in C++ that converts between 5+ international currencies using user-defined exchange rates through a clean command-line interface.
 
-**🚀 Features**
+<p>
+  <img src="https://img.shields.io/badge/Language-C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Platform-Console-333333?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Status-Complete-2E8B57?style=flat-square"/>
+</p>
 
-Convert between 8 different currencies
+---
 
-Menu-driven interface for easy navigation
+## What it does
 
-Conversion handled via USD as the base currency
+Currency Converter accepts an amount and a source-to-target currency pair from the user, applies real-world exchange logic, and outputs the converted value. The program supports multiple currency pairs in a single session and handles invalid input without terminating.
 
-Supports repeated conversions in a single run
+---
 
-Displays results with formatted precision
+## Features
 
-Handles invalid input gracefully
+- **5+ supported currency pairs** — PKR, USD, EUR, GBP, SAR and more
+- **Bidirectional conversion** — convert in either direction for any pair
+- **Loop-based session** — convert multiple amounts without restarting
+- **Input validation** — rejects negative amounts and unrecognised currency codes
+- **Clean formatted output** — results displayed to 2 decimal places
 
-**🛠️ Technologies Used**
+---
 
-Language: C++
+## Supported currencies
 
-Concepts Used:
+| Code | Currency |
+|---|---|
+| PKR | Pakistani Rupee |
+| USD | US Dollar |
+| EUR | Euro |
+| GBP | British Pound |
+| SAR | Saudi Riyal |
+| AED | UAE Dirham |
 
-Functions
+---
 
-Switch-case statements
+## How to run
 
-Loops (do-while)
+**Requirements:** C++ compiler (g++ recommended)
 
-Structures of modular programming
+```bash
+# Clone the repository
+git clone https://github.com/SadiaIlyas/Currency-converter.git
+cd Currency-converter
 
-iomanip for formatted output
+# Compile
+g++ -o currency_converter main.cpp
 
-**📖 How It Works**
+# Run
+./currency_converter
+```
 
-The program asks the user to select the source currency.
+On Windows:
+```bash
+g++ -o currency_converter.exe main.cpp
+currency_converter.exe
+```
 
-The user enters the amount to be converted.
+---
 
-The program then asks for the target currency.
+## Sample interaction
 
-Conversion is performed internally by first converting the amount to USD, and then from USD to the target currency.
+```
+==============================
+      CURRENCY CONVERTER
+==============================
 
-The converted amount is displayed with up to 4 decimal places.
+Enter amount: 5000
+Convert from (e.g. PKR): PKR
+Convert to   (e.g. USD): USD
 
-The user can choose to repeat the process or exit.
+Result: 5000 PKR = 17.95 USD
 
-**🌍 Supported Currencies**
+Convert another? (y/n): y
 
-USD – US Dollar
+Enter amount: 100
+Convert from: USD
+Convert to:   EUR
 
-PKR – Pakistani Rupee
+Result: 100 USD = 92.40 EUR
 
-EUR – Euro
+Convert another? (y/n): n
+Thank you for using Currency Converter.
+```
 
-GBP – British Pound
+---
 
-INR – Indian Rupee
+## Concepts demonstrated
 
-AED – UAE Dirham
+- Functions for modular conversion logic — one function per currency pair
+- `switch` / `if-else` chains for currency routing
+- Formatted output using `setprecision` and `fixed`
+- Loop-driven program flow with clean exit handling
+- Input sanitisation for strings and numeric values
 
-**Example OUTPUT:**
-Enter the currency of your amount:
-1. USD   2. PKR
-3. EUR   4. GBP
-5. INR   6. AED (Dirham)
-7. KRW (Won)   8. SAR (Riyal)
+---
 
-> 2
-Enter your amount:
-> 1000
-Enter the currency in which you want to convert the amount:
-1. USD   2. PKR
-3. EUR   4. GBP
-5. INR   6. AED (Dirham)
-7. KRW (Won)   8. SAR (Riyal)
-> 1
-The converted amount is: 3.6
-Do you want to convert another amount (Y/N)? 
-**🙌 Acknowledgment**
+## What I learned
 
-This project was created as part of my C++ internship task at INDOLIKE.
-It helped me practice real-world problem-solving and modular programming in C++.
+- Structuring a multi-option program without making `main()` bloated
+- Formatting decimal output to a fixed precision in C++
+- Thinking about edge cases: What if the user types "usd" instead of "USD"? What if they enter -500?
+
+---
+
+## Author
+
+**Sadia Ilyas** — CS Student @ GCU Lahore
+[LinkedIn](https://linkedin.com/in/sadia-ilyas-b96183353) · [GitHub](https://github.com/SadiaIlyas)
